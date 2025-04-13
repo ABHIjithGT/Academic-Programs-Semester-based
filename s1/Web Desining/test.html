@@ -1,0 +1,170 @@
+<html>
+  
+<head>
+<title>FORM</title>
+</head>
+
+
+
+<style>
+input[type=text],input[type=date],textarea,select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #94f1ed;
+  border-radius: 4px;
+  box-sizing: border-box;
+  
+}
+
+input[type=submit] {
+  width: 30%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+
+  width: 30%;
+  background-color: #45a049;
+}
+
+div {
+  width: 50%;
+  height: auto;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+
+ }
+
+ img{
+
+  border: 2px solid #4294f1;
+  border-radius: 25px;
+ }
+ .content1 {
+  width: 50%;
+  height: 600px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  
+  
+  
+ }
+ 
+ .content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 900px;
+  border-style: double;
+  border-radius: 5px;  
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+</style>
+
+<script>
+  function validateForm() {
+    let x1 = document.forms["myForm"]["course"].value;
+    if (x1 == "") {
+      alert("Course must be filled out");
+      return false;
+    }
+    let x = document.forms["myForm"]["name"].value;
+    if (x == "") {
+      alert("Name must be filled out");
+      return false;
+    }
+    let x2 = document.forms["myForm"]["date"].value;
+    if (x2 == "") {
+      alert("DOB must be filled out");
+      return false;
+    }
+    let y = document.forms["myForm"]["address"].value;
+    if (y == "") {
+      alert("Address must be filled out");
+      return false;
+    } 
+    let y1 = document.forms["myForm"]["gender"].value;
+    if (y1 == "") {
+      alert("Gender must be filled out");
+      return false;
+    } 
+    let y2 = document.forms["myForm"]["phone"].value;
+    if (y2 == "") {
+      alert("Phoneno must be filled out");
+      return false;
+    } 
+    let y3 = document.forms["myForm"]["mail"].value;
+    if (y3 == "") {
+      alert("Mail ID must be filled out");
+      return false;
+    } 
+    let y31 = document.forms["myForm"]["gname"].value;
+    if (y31 == "") {
+      alert("Guardian Name must be filled out");
+      return false;
+    } 
+  }
+  </script>
+
+<body style="background-color:#E6E6FA">
+
+  <div class=content></div>
+
+ <br> 
+ <center>
+<div class=content>
+  <div>
+    <img src="logo.png" alt="logo" width="150" height="150">
+  </div>
+
+<div class="content1">
+      <H1>ADMISSION REGISTRATION FORM</H1>
+      <form name="myForm" id="myForm" onsubmit="return validateForm()" method="post">
+        <table>  
+       <tr><td>Course:</td> <td>
+          Btech<input type="radio" id="Btech" name="course" value="Btech">
+          Mtech<input type="radio" id="Mtech" name="course" value="Mtech">        
+          MCA<input type="radio" id="MCA" name="course" value="MCA"></td></tr>
+
+   
+      <tr><td>Name:</td><td><input type=text id="name" name="name" placeholder="Enter your name"></td></tr>
+      
+      
+       <tr><td>Gender:</td> <td>
+        Male<input type="radio" id="male" name="gender" value="male">
+        Female<input type="radio" id="female" name="gender" value="female">        
+        Other<input type="radio" id="other" name="gender" value="other"></td></tr>
+      <tr><td>DOB:</td><td><input type=date id="date" name="date" placeholder="Enter your DOB"></td></tr>
+
+      <tr><td>Address:</td><td><textarea id="address" name="address" placeholder="Enter your address"></textarea></td></tr>
+      <tr><td>Phone no:</td><td><input type=text id="phone" name="phone" placeholder="Enter your phone no"></td></tr>
+      <tr><td>Email ID</td><td><input type=text id="mail" name="mail" placeholder="Enter your mail id"></td></tr>
+      <tr><td>Guardian:</td><td><input type=text id="gname" name="gname" placeholder="Enter guardian name"></td></tr>
+      
+      <tr><td>Country</td><td><select name="country" id="country">
+                    <option value="india">India</option>
+                    <option value="america">America</option>
+                    <option value="nepal">Nepal</option>
+                    <option value="srilanka">Srilanka</option>
+                    
+                    </select></td></tr>
+ </table>       
+         <br><input type="submit" value="Submit" id="submit" name="submit" >
+        </form> </div>     
+</div>        
+</center>
+</body>
+
+</html>
+
+
